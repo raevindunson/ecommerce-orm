@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
     ]
   })
   .then(dbProductData => res.json(dbProductData))
-  .catch(err => {
+  .catch((err) => {
     console.log(err);
     res.status(500).json(err);
   });
@@ -49,7 +49,7 @@ router.get('/:id', (req, res) => {
       }
     ]
   })
-  .then(dbProductData => {
+  .then((dbProductData) => {
     if (!dbProductData) {
       res
       .status(404)
@@ -58,7 +58,7 @@ router.get('/:id', (req, res) => {
     }
     res.json(dbProductData);
   })
-  .catch(err => {
+  .catch((err) => {
     console.log(err);
     res.status(500).json(err);
   });
