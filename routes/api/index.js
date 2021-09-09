@@ -8,3 +8,5 @@ router.use('/products', productRoutes);
 router.use('/tags', tagRoutes);
 
 module.exports = router;
+
+// Received help from  https://github.com/priyaravi23/orm-e-commerce

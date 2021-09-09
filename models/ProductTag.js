@@ -38,3 +38,5 @@ ProductTag.init(
 );
 
 module.exports = ProductTag;
+
+// Received help from  https://github.com/priyaravi23/orm-e-commerce

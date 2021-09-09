@@ -36,3 +36,5 @@ const productData = [
 const seedProducts = () => Product.bulkCreate(productData);
 
 module.exports = seedProducts;
+
+// Received help from https://github.com/Sarah-Safarzadeh/e-commerce

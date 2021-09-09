@@ -53,3 +53,5 @@ Product.init(
 );
 
 module.exports = Product;
+
+// Received help from  https://github.com/priyaravi23/orm-e-commerce

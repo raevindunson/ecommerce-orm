@@ -24,3 +24,5 @@ const seedAll = async () => {
 };
 
 seedAll();
+
+// Received help from https://github.com/Sarah-Safarzadeh/e-commerce

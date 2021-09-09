@@ -28,3 +28,5 @@ Category.init(
 );
 
 module.exports = Category;
+
+// Received help from  https://github.com/priyaravi23/orm-e-commerce

@@ -27,3 +27,5 @@ Tag.init(
 );
 
 module.exports = Tag;
+
+// Received help from  https://github.com/priyaravi23/orm-e-commerce
