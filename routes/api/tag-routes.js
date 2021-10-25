@@ -42,7 +42,7 @@ router.get('/:id', (req, res) => {
   .then((dbTagData) => {
     if (!dbTagData) {
       res.status(404)
-      .json({ message: "There is no tag found based on the given id"});
+      .json(err);
       return;
     }
     res.json(dbTagData);
@@ -77,14 +77,15 @@ router.put('/:id', (req, res) => {
   .then((dbTagData) => {
     if (!dbTagData[0]) {
       res.status(404)
-      .json({ message: "There is no tag found based on this id"});
+      .json({ message: "err"});
       return;
     }
     res.json(dbTagData);
   })
   .catch((err) => {
     console.log(err);
-    res.status(500).json(err);
+    res.status(500)
+    .json(err);
   });
 });
 
@@ -97,14 +98,16 @@ router.delete('/:id', (req, res) => {
   })
   .then((dbTagData) => {
     if(!dbTagData) {
-      res.status(404).json({ message: "There is no tag found based on this id"});
+      res.status(404)
+      .json({ message: "err"});
       return;
     }
     res.json(dbTagData);
   })
   .catch((err) => {
     console.log(err);
-    res.status(500).json(err);
+    res.status(500)
+    .json(err);
   });
 });
 
