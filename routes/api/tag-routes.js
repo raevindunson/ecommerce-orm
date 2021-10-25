@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
     include: [
       {
         model: Product,
-        attributes: ["id", "product_name", "price", "stock", "category_id"],
+        attributes: ["id", "product_name", "category_id", "price"],
         through: ProductTag,
       },
     ]
@@ -20,7 +20,8 @@ router.get('/', (req, res) => {
   .then((dbTagData) => res.json(dbTagData))
   .catch((err) => {
     console.log(err);
-    res.status(500).json(err);
+    res.status(500)
+    .json(err);
   });
 });
 
@@ -35,7 +36,7 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Product,
-        attributes: ["id", "product_name", "price", "stock", "category_id"]
+        attributes: ["id", "product_name", "category_id"]
       }
     ]
   })
@@ -49,7 +50,8 @@ router.get('/:id', (req, res) => {
   })
   .catch((err) => {
     console.log(err);
-    res.status(500).json(err);
+    res.status(500)
+    .json(err);
   });
 });
 
@@ -62,7 +64,8 @@ router.post('/', (req, res) => {
     })
     .catch((err) => {
       console.log(err);
-      res.status(500).json(err);
+      res.status(500)
+      .json(err);
     })
   });
 });
