@@ -54,5 +54,3 @@ const productTagData = [
 const seedProductTags = () => ProductTag.bulkCreate(productTagData);
 
 module.exports = seedProductTags;
-
-// Received help from https://github.com/Sarah-Safarzadeh/e-commerce
